@@ -2,9 +2,9 @@
 
 Scraping syncfusion for ebooks: [https://www.syncfusion.com/resources/techportal/ebooks](https://www.syncfusion.com/resources/techportal/ebooks)
 
-[https://www.syncfusion.com](https://www.syncfusion.com) is a cool site that offers a nice quantity of ebooks to download on a variety of subjects. Unfortunately downloading each ebook can be quite a painful and repetitive task as you have to fill in a form every time.
+[https://www.syncfusion.com](https://www.syncfusion.com) is a cool company that offers a nice quantity of ebooks to download on a variety of subjects. Unfortunately downloading each ebook can be quite a painful and repetitive task as you have to fill in a form every time.
 
-This script allows you to download all ebooks to your machine without creating an account. Nevertheless, I recommend creating an account to thank them for the free content.
+This script allows you to download all ebooks to your machine without creating an account. Nevertheless, I recommend [creating an account](https://www.syncfusion.com/account/register) to thank them for the free content.
 
 
 ---
@@ -25,3 +25,6 @@ This script allows you to download all ebooks to your machine without creating a
 
     # Start scraping with the following command:
     python main.py
+
+
+All the ebooks will be located in the **syncfusion_scrape** directory
