@@ -40,8 +40,8 @@ def main():
                 # Replace special names. Some patterns are too specific ....
                 pdf_name = pdf_name.replace('.js', 'js')
                 pdf_name = pdf_name.replace('Git', 'GIT')
-                pdf_name = pdf_name.replace('GIS', 'GIS% ')
-                pdf_name = pdf_name.replace('Part_', 'Part%20')
+                pdf_name = pdf_name.replace('GIS_', 'GIS ')
+                pdf_name = pdf_name.replace('Part_', 'Part ')
                 pdf_name = pdf_name.replace('Csharp', 'C_Sharp')
                 pdf_name = pdf_name.replace('SQL_on', 'SQL_On')
                 pdf_name = pdf_name.replace('.Forms', '_Forms')
@@ -51,7 +51,18 @@ def main():
                 pdf_name = pdf_name.replace('Message_Queuing_with_RabbitMQ', 'RabbitMQ')
                 pdf_name = pdf_name.replace('8.1', '8_1')
                 pdf_name = pdf_name.replace('Windows_Azure_SQL_Reporting', 'WindowsAzureSqlReporting')
-
+                pdf_name = pdf_name.replace('Azure_Websites', 'Azure')
+                pdf_name = pdf_name.replace('SharePoint_2013_App_Model', 'SharePoint')
+                pdf_name = pdf_name.replace('_Expressions', 'Expressions')
+                pdf_name = pdf_name.replace('Functional_Programming_Succinctly', 'functional_programming_succinctly')
+                pdf_name = pdf_name.replace('Localization_for_.NET_', 'Localization_')
+                pdf_name = pdf_name.replace('Analysis_Services_Succinctly','Analysis_Services Succinctly')
+                pdf_name = pdf_name.replace('Unit_Testing','UnitTesting')
+                pdf_name = pdf_name.replace('Windows_Store_Apps','WindowsStoreApps')
+                pdf_name = pdf_name.replace('-C_Succinctly','-C Succinctly')
+                pdf_name = pdf_name.replace('ASP.NET_MVC_4_Mobile_Websites','aspnetmvc4')
+                
+                
                 try:
                     pdf_link = dl_link + pdf_name + ".pdf"
 
