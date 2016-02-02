@@ -7,7 +7,7 @@ dl_link = "http://files2.syncfusion.com/Downloads/Ebooks/"
 
 
 def download_file(download_url, title):
-    response = urllib2.urlopen(download_url)
+    response = urllib.urlopen(download_url)
     file = open("%s.pdf" % title, 'w')
     file.write(response.read())
     file.close()
@@ -71,7 +71,8 @@ def main():
                         download_file(pdf_link, pdf_name)
                         print 'Downloaded %s' % pdf_name
                         dl_counter += 1
-                    except:
+                    except Exception,e:
+                        print str(e)
                         failed_dls.append(pdf_link)
 
                 except:
