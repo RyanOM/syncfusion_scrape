@@ -5,6 +5,8 @@ Scraping syncfusion for ebooks: [https://www.syncfusion.com/resources/techportal
 [https://www.syncfusion.com](https://www.syncfusion.com) is a cool site that offers a nice quantity of ebooks to download on a variety of subjects. Unfortunately downloading each ebook can be quite a painful and repetitive task as you have to fill in a form every time.
 
 This script allows you to download all ebooks to your machine without creating an account. Nevertheless, I recommend creating an account to thank them for the free content.
+
+
 ---
 ## Instructions
 
