@@ -22,7 +22,7 @@ def main():
     soup = BeautifulSoup(html)
     
     h3_tags = soup('a', href=True)
-    failed = []
+    failed_links = []
     failed_dls = []
     dl_counter = 0
 
@@ -76,20 +76,21 @@ def main():
                         failed_dls.append(pdf_link)
 
                 except:
-                    failed.append(a_tag)
-
-    print '#################'
-    print ''
-    print 'Failed DLs'
-    for fail_dl in failed_dls:
-        print fail_dl
+                    failed_links.append(a_tag)
+    
+    if len(failed_dls) > 0:
+        print '#################'
+        print ''
+        print 'Failed DLs'
+        for fail_dl in failed_dls:
+            print fail_dl
 
     if len(failed) > 0:
         print '#################'
         print ''
         print 'Failed links'
-        for fail in failed:
-            print fail
+        for fail_link in failed_links:
+            print fail_link
 
     print '#################'
     print ''
