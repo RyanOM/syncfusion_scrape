@@ -28,3 +28,6 @@ This script allows you to download all ebooks to your machine without creating a
 
 
 All the ebooks will be located in the **syncfusion_scrape** directory
+
+
+Please note that this project is intended for personal/educational use only.
