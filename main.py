@@ -15,14 +15,14 @@ def download_file(download_url, title):
 
 def main():
     
-    #url = raw_input('Enter URL - ')
     url = 'https://www.syncfusion.com/resources/techportal/ebooks'
     
     html = urllib.urlopen(url).read()
     soup = BeautifulSoup(html)
+
+    print("Downloading books from %s\n" % url)
     
     h3_tags = soup('a', href=True)
-    failed_links = []
     failed_dls = []
     dl_counter = 0
 
@@ -63,34 +63,23 @@ def main():
                 pdf_name = pdf_name.replace('ASP.NET_MVC_4_Mobile_Websites','aspnetmvc4')
                 
                 
+                pdf_link = dl_link + pdf_name + ".pdf"
+
+                # Download book
                 try:
-                    pdf_link = dl_link + pdf_name + ".pdf"
+                    download_file(pdf_link, pdf_name)
+                    print 'Downloaded %s' % pdf_name
+                    dl_counter += 1
+                except Exception, e:
+                    print str(e)
+                    failed_dls.append(pdf_link)
 
-                    # Download book
-                    try:
-                        download_file(pdf_link, pdf_name)
-                        print 'Downloaded %s' % pdf_name
-                        dl_counter += 1
-                    except Exception,e:
-                        print str(e)
-                        failed_dls.append(pdf_link)
-
-                except:
-                    failed_links.append(a_tag)
-    
     if len(failed_dls) > 0:
         print '#################'
         print ''
         print 'Failed DLs'
         for fail_dl in failed_dls:
             print fail_dl
-
-    if len(failed) > 0:
-        print '#################'
-        print ''
-        print 'Failed links'
-        for fail_link in failed_links:
-            print fail_link
 
     print '#################'
     print ''
